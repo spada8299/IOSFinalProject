@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B682BA1CDB442000A5D658 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B682B91CDB442000A5D658 /* User.swift */; };
+		02B682BC1CDB453700A5D658 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B682BB1CDB453700A5D658 /* Mission.swift */; };
 		02C492C31CD20B5A000998B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C492C21CD20B5A000998B7 /* AppDelegate.swift */; };
 		02C492C81CD20B5A000998B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C492C61CD20B5A000998B7 /* Main.storyboard */; };
 		02C492CA1CD20B5A000998B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C492C91CD20B5A000998B7 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B682B91CDB442000A5D658 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		02B682BB1CDB453700A5D658 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		02C492BF1CD20B5A000998B7 /* IOSFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C492C21CD20B5A000998B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C492C71CD20B5A000998B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			children = (
 				02C492C21CD20B5A000998B7 /* AppDelegate.swift */,
 				02C492C61CD20B5A000998B7 /* Main.storyboard */,
+				02B682B91CDB442000A5D658 /* User.swift */,
+				02B682BB1CDB453700A5D658 /* Mission.swift */,
 				02C493051CD916E1000998B7 /* MissionTabBar.xib */,
 				02C493071CD91896000998B7 /* MissionTabBar.swift */,
 				02C492F31CD90E74000998B7 /* MapViewController.swift */,
@@ -365,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B682BC1CDB453700A5D658 /* Mission.swift in Sources */,
 				02C492F91CD90ED4000998B7 /* EditProfileViewController.swift in Sources */,
 				02C492F71CD90EB8000998B7 /* ProfileViewController.swift in Sources */,
 				02C493011CD90F3B000998B7 /* ChatViewController.swift in Sources */,
@@ -373,6 +380,7 @@
 				02C492C31CD20B5A000998B7 /* AppDelegate.swift in Sources */,
 				02C492F41CD90E74000998B7 /* MapViewController.swift in Sources */,
 				02C4930A1CD9F780000998B7 /* VolunteersTableViewController.swift in Sources */,
+				02B682BA1CDB442000A5D658 /* User.swift in Sources */,
 				02C493081CD91896000998B7 /* MissionTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

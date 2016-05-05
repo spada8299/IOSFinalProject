@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class ProfileViewController: UIViewController, MissionTabBarDelegate {
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMissionTabBar()
+        
         // Do any additional setup after loading the view.
     }
 
