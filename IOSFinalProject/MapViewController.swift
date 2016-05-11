@@ -5,15 +5,19 @@
 //  Created by pingRuiLiao on 2016/5/4.
 //  Copyright © 2016年 pingRuiLiao. All rights reserved.
 //
-
+import GoogleMaps
 import UIKit
 
-class MapViewController: UIViewController, MissionTabBarDelegate {
-
+class MapViewController: UIViewController, MissionTabBarDelegate, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    @IBOutlet weak var mapView: GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMissionTabBar()
-        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         //print(missionTabBar.frame)
     }
     func setupMissionTabBar() {
@@ -33,10 +37,27 @@ class MapViewController: UIViewController, MissionTabBarDelegate {
             break
         }
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+    
+    
+    
+    // MARK: CLLocationManagerDelegate
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        
+        if status == .AuthorizedWhenInUse {
+            
+            locationManager.startUpdatingLocation()
+            mapView.myLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            locationManager.stopUpdatingLocation()
+        }
         
     }
-
+ 
 }
